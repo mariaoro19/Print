@@ -31,7 +31,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
 # Initialing database
-from app.config import Config
+#from app.config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
@@ -153,17 +153,37 @@ def pay(filename):
    
    color=request.form.get('color')
    #numCopies=str(request.form.get('numCopies'))
-   numCopies=int(request.form.get('numCopies'))
-   pages=request.form.get('pages')
-   sides= request.form.get('side')
    filepdf='static/uploads/'+filename
    file2 = open(filepdf, 'rb')
    readpdf = PyPDF2.PdfFileReader(file2)
-   totalpages = readpdf.numPages
+   totalpages = int(readpdf.numPages)
+   print("totalpages",totalpages, type(totalpages))
+   numCopies=int(request.form.get('numCopies'))
+   if numCopies ==None:
+    numCopies=1
+   print("numCopies",numCopies)
+   pages=request.form.get('pages')
+   if pages == "":
+    pages= int(totalpages)
+   print("pages",pages,type(pages))
+   sides= request.form.get('side')
+   
    numPagePrinted = totalpages * numCopies	
    sizeFile = session.get('size', None)
-   p=Prints(sheets=numPagePrinted, totalPrice=2000, state=0)
-   print("numPagePrinted",numPagePrinted)
+   color=request.form.get('color')
+   if sizeFile == "Letter" and color == "monochrome" and sides == "one-sided":
+    totalPrice =80*numCopies*pages
+   elif sizeFile == "Letter" and color == "monochrome" and sides == "DuplexTumble":
+    totalPrice =70*numCopies*pages
+   elif sizeFile == "Legal" and color == "monochrome" and sides == "one-sided":
+    totalPrice =100*numCopies*pages
+   elif sizeFile == "Legal" and color == "monochrome" and sides == "DuplexTumble":
+    totalPrice =90*numCopies*pages
+   else:
+    totalPrice =200*numCopies*pages
+
+   p=Prints(sheets=numPagePrinted, totalPrice=totalPrice, state=0)
+   print("Total price",totalPrice, "numCopies", numCopies)
    db.session.add(p)
    db.session.commit()
    #printers = Prints.query.all()
@@ -214,17 +234,21 @@ def pay(filename):
 #        print ("PRINT FAILURE")
 
    #Removing files after print
-   filesRemove=glob.glob('static/uploads/*')
-   for f in filesRemove:
-       os.remove(f)
-
    
-   return render_template('payProcess.html')
+
+   if pages <=totalpages:
+    filesRemove=glob.glob('static/uploads/*')
+    for f in filesRemove:
+       os.remove(f)
+    return render_template('payProcess.html')
+   else:
+    flash('Ingreso incorrecto de páginas a imprimir', 'error')
+    return redirect(request.url)
 
 # Connecting to the localhost
 if __name__ == '__main__':
    
-   app.run(debug=True, port=3003, host='192.168.1.21')
+   app.run(debug=True, port=3002, host='192.168.1.21')
    #app.run(debug=True, port=3003, host='127.0.0.2')
    
    #app.config['SERVER_NAME']= "printexp.dev:3003"

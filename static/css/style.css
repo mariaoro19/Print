@@ -177,6 +177,7 @@ form dl {
 }
 .error{
    margin-top: 1rem;
+   margin-bottom: 1rem;
    color: #f7660b;
    font-size: 1.5rem;
 }
