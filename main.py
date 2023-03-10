@@ -159,9 +159,12 @@ def pay(filename):
    readpdf = PyPDF2.PdfFileReader(file2)
    totalpages = int(readpdf.numPages)
    print("totalpages",totalpages, type(totalpages))
-   numCopies=int(request.form.get('numCopies'))
+   numCopies=request.form.get('numCopies')
    if numCopies ==None:
     numCopies=1
+   else:
+    numCopies=int(request.form.get('numCopies'))
+   
    print("numCopies",numCopies)
    pages=request.form.get('pages')
    
