@@ -269,7 +269,7 @@ def pay(filename):
        os.remove(f)
     return render_template('payProcess.html')
    else:
-    flash('Ingreso incorrecto de páginas a imprimir', 'error')
+    flash('Ingreso incorrecto de páginas a imprimir, reintente de nuevo', 'error')
     return render_template('pay.html', filename=filename,totalpages=totalpages, sizeFile=sizeFile)
 
 # Connecting to the localhost

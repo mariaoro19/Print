@@ -16,7 +16,8 @@
 <body>
     
         <form class="back">
-            <input type="button" class="btnBack" value="<" onclick="history.back()">
+            <!-- <input type="button" class="btnBack" value="<" onclick="history.back()"> -->
+            <p><a href=upload ><button class=btnBack ><</button></a></p>
         </form>
         <div class="logoInfo">
             <img class="logo" src="/static/img/printexpress.PNG" />
@@ -25,7 +26,7 @@
                     {% with messages = get_flashed_messages() %}
                     {% if messages %}
                     {% for message in messages %}
-                <p>{{ message }}</p>
+                <p class="error">{{ message }}</p>
                 {% endfor %}
     
                 {% endif %}
