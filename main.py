@@ -12,6 +12,7 @@ from datetime import datetime
 from sqlalchemy import select
 from pytz import timezone
 import pytz
+import itertools
 
 format = "%Y-%m-%d %H:%M:%S %Z%z"
 # Current time in UTC
@@ -163,8 +164,34 @@ def pay(filename):
     numCopies=1
    print("numCopies",numCopies)
    pages=request.form.get('pages')
+   
+   
    if pages == "":
     pages= int(totalpages)
+   else:
+    # Create an iterator that returns the characters from index 1 to the end of the string
+      #char_iter = itertools.islice(str(pages), 0, None)
+      #print(char_iter[0])
+
+      # Iterate over the selected characters
+      countPages=0
+      count=0
+      for char in range(0, len(str(pages))):
+        if pages[char] != "-" and pages[char].isnumeric() and int(pages[char])<=totalpages:
+            countPages+=1
+        elif pages[char] != "-" and pages[char] != "," and pages[char].isnumeric()== False:
+            countPages = 1+totalpages
+            break
+        elif pages[char] == ",":
+            countPages=int(pages[char+1])-int(pages[char-1])
+            #print("aqui2",pages[char+1]-pages[char-1])
+        elif pages[char] == "-":
+            pass
+        #else:
+            #countPages=totalpages+1
+        count+=1
+        print(pages[char])
+      pages=countPages
    print("pages",pages,type(pages))
    sides= request.form.get('side')
    
@@ -183,7 +210,7 @@ def pay(filename):
     totalPrice =200*numCopies*pages
 
    p=Prints(sheets=numPagePrinted, totalPrice=totalPrice, state=0)
-   print("Total price",totalPrice, "numCopies", numCopies)
+   #print("Total price",totalPrice, "numCopies", numCopies)
    db.session.add(p)
    db.session.commit()
    #printers = Prints.query.all()
@@ -243,12 +270,12 @@ def pay(filename):
     return render_template('payProcess.html')
    else:
     flash('Ingreso incorrecto de páginas a imprimir', 'error')
-    return redirect(request.url)
+    return render_template('pay.html', filename=filename,totalpages=totalpages, sizeFile=sizeFile)
 
 # Connecting to the localhost
 if __name__ == '__main__':
    
-   app.run(debug=True, port=3002, host='192.168.1.21')
+   app.run(debug=True, port=3004, host='192.168.1.21')
    #app.run(debug=True, port=3003, host='127.0.0.2')
    
    #app.config['SERVER_NAME']= "printexp.dev:3003"
