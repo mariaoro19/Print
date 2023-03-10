@@ -81,6 +81,7 @@ def allowed_file(filename):
 @app.route('/')
 def upload_form():
     return render_template('upload.html')
+    #return render_template('paying.html')
 
 #Display and do a Post in the API for choosing the file
 @app.route('/', methods=['POST'])
@@ -270,7 +271,7 @@ def pay(filename):
     filesRemove=glob.glob('static/uploads/*')
     for f in filesRemove:
        os.remove(f)
-    return render_template('payProcess.html')
+    return render_template('paying.html', totalPrice=totalPrice)
    else:
     flash('Ingreso incorrecto de páginas a imprimir, reintente de nuevo', 'error')
     return render_template('pay.html', filename=filename,totalpages=totalpages, sizeFile=sizeFile)
@@ -278,7 +279,7 @@ def pay(filename):
 # Connecting to the localhost
 if __name__ == '__main__':
    
-   app.run(debug=True, port=3004, host='192.168.1.21')
+   app.run(debug=True, port=3003, host='192.168.1.21')
    #app.run(debug=True, port=3003, host='127.0.0.2')
    
    #app.config['SERVER_NAME']= "printexp.dev:3003"
