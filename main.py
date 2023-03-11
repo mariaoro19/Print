@@ -13,6 +13,11 @@ from sqlalchemy import select
 from pytz import timezone
 import pytz
 import itertools
+import logging
+
+#Create a file of logs
+logging.basicConfig(filename='logs.txt',filemode='a',format='%(asctime)s - %(message)s', level=logging.ERROR)
+
 
 format = "%Y-%m-%d %H:%M:%S %Z%z"
 # Current time in UTC
@@ -132,6 +137,8 @@ def upload_image():
             flash('Formato del documento no admitido', 'error')
             return redirect(request.url)
     except:
+       #log_error(e)
+        #logging.error("Exception occurred", exc_info=True)
         return render_template('error.html', filename=filename,totalpages=totalpages, sizeFile=sizeFile)
                         
     
