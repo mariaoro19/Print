@@ -38,3 +38,120 @@
 2023-03-10 22:01:27,831 - 192.168.1.2 - - [10/Mar/2023 22:01:27] "[37mPOST / HTTP/1.1[0m" 200 -
 2023-03-10 22:01:27,895 - 192.168.1.2 - - [10/Mar/2023 22:01:27] "[37mGET /static/uploads/INQUILINO_PERSONA_NATURAL_SURA_2018.pdf HTTP/1.1[0m" 200 -
 2023-03-10 22:01:31,045 - 192.168.1.2 - - [10/Mar/2023 22:01:31] "[37mPOST /pay/INQUILINO_PERSONA_NATURAL_SURA_2018.pdf HTTP/1.1[0m" 200 -
+2023-03-11 09:30:25,110 - 192.168.1.2 - - [11/Mar/2023 09:30:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-03-11 10:05:05,054 -  * Detected change in '/home/remoteprinter/Documentos/printAuto/main.py', reloading
+2023-03-11 10:38:12,054 -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2023-03-11 10:38:12,056 -  * Restarting with stat
+2023-03-11 10:38:13,180 -  * Debugger is active!
+2023-03-11 10:38:13,181 -  * Debugger PIN: 263-317-410
+2023-03-11 10:38:49,387 -  * Detected change in '/home/remoteprinter/Documentos/printAuto/main.py', reloading
+2023-03-11 10:38:49,582 -  * Restarting with stat
+2023-03-11 10:38:50,687 -  * Debugger is active!
+2023-03-11 10:38:50,688 -  * Debugger PIN: 263-317-410
+2023-03-11 10:39:16,930 -  * Running on http://0.0.0.0:3003/ (Press CTRL+C to quit)
+2023-03-11 10:39:16,932 -  * Restarting with stat
+2023-03-11 10:39:18,050 -  * Debugger is active!
+2023-03-11 10:39:18,052 -  * Debugger PIN: 263-317-410
+2023-03-11 10:42:05,498 -  * Running on http://192.168.1.21:3004/ (Press CTRL+C to quit)
+2023-03-11 10:42:05,500 -  * Restarting with stat
+2023-03-11 10:42:06,627 -  * Debugger is active!
+2023-03-11 10:42:06,628 -  * Debugger PIN: 263-317-410
+2023-03-11 10:42:22,167 - 192.168.1.2 - - [11/Mar/2023 10:42:22] "[37mGET / HTTP/1.1[0m" 200 -
+2023-03-11 10:42:22,228 - 192.168.1.2 - - [11/Mar/2023 10:42:22] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2023-03-11 10:42:22,229 - 192.168.1.2 - - [11/Mar/2023 10:42:22] "[36mGET /static/img/printexpress.PNG HTTP/1.1[0m" 304 -
+2023-03-11 10:42:22,263 - 192.168.1.2 - - [11/Mar/2023 10:42:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-03-11 10:43:16,964 -  * Running on http://printexp:3005/ (Press CTRL+C to quit)
+2023-03-11 10:43:16,966 -  * Restarting with stat
+2023-03-11 10:43:18,121 -  * Debugger is active!
+2023-03-11 10:43:18,121 -  * Debugger PIN: 263-317-410
+2023-03-11 10:52:45,272 -  * Running on http://192.168.1.21:3002/ (Press CTRL+C to quit)
+2023-03-11 10:52:45,274 -  * Restarting with stat
+2023-03-11 10:52:46,420 -  * Debugger is active!
+2023-03-11 10:52:46,421 -  * Debugger PIN: 263-317-410
+2023-03-11 10:52:55,778 - 192.168.1.2 - - [11/Mar/2023 10:52:55] "[37mGET / HTTP/1.1[0m" 200 -
+2023-03-11 10:52:55,841 - 192.168.1.2 - - [11/Mar/2023 10:52:55] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2023-03-11 10:52:55,853 - 192.168.1.2 - - [11/Mar/2023 10:52:55] "[36mGET /static/img/printexpress.PNG HTTP/1.1[0m" 304 -
+2023-03-11 10:52:55,873 - 192.168.1.2 - - [11/Mar/2023 10:52:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-03-11 10:53:01,373 - 192.168.1.2 - - [11/Mar/2023 10:53:01] "[37mPOST / HTTP/1.1[0m" 200 -
+2023-03-11 10:53:01,440 - 192.168.1.2 - - [11/Mar/2023 10:53:01] "[37mGET /static/uploads/greicy2.pdf HTTP/1.1[0m" 200 -
+2023-03-11 11:54:00,613 -  * Running on http://192.168.1.21:3001/ (Press CTRL+C to quit)
+2023-03-11 11:54:00,615 -  * Restarting with stat
+2023-03-11 11:54:01,738 -  * Debugger is active!
+2023-03-11 11:54:01,739 -  * Debugger PIN: 263-317-410
+2023-03-11 11:54:06,743 - 192.168.1.2 - - [11/Mar/2023 11:54:06] "[37mGET / HTTP/1.1[0m" 200 -
+2023-03-11 11:54:06,940 - 192.168.1.2 - - [11/Mar/2023 11:54:06] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2023-03-11 11:54:07,050 - 192.168.1.2 - - [11/Mar/2023 11:54:07] "[37mGET /static/img/printexpress.PNG HTTP/1.1[0m" 200 -
+2023-03-11 11:54:07,409 - 192.168.1.2 - - [11/Mar/2023 11:54:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-03-11 11:54:11,930 - 192.168.1.2 - - [11/Mar/2023 11:54:11] "[37mPOST / HTTP/1.1[0m" 200 -
+2023-03-11 11:54:11,977 - 192.168.1.2 - - [11/Mar/2023 11:54:11] "[32mGET /display/greicy2.pdf HTTP/1.1[0m" 301 -
+2023-03-11 11:54:12,001 - 192.168.1.2 - - [11/Mar/2023 11:54:12] "[37mGET /static/uploads/greicy2.pdf HTTP/1.1[0m" 200 -
+2023-03-11 11:54:14,900 - 192.168.1.2 - - [11/Mar/2023 11:54:14] "[37mPOST /pay/greicy2.pdf HTTP/1.1[0m" 200 -
+2023-03-11 11:55:15,126 -  * Detected change in '/home/remoteprinter/Documentos/printAuto/main.py', reloading
+2023-03-11 11:55:15,317 -  * Restarting with stat
+2023-03-11 11:55:16,456 -  * Debugger is active!
+2023-03-11 11:55:16,457 -  * Debugger PIN: 263-317-410
+2023-03-11 11:55:22,750 - 192.168.1.2 - - [11/Mar/2023 11:55:22] "[37mGET / HTTP/1.1[0m" 200 -
+2023-03-11 11:55:27,096 - 192.168.1.2 - - [11/Mar/2023 11:55:27] "[37mPOST / HTTP/1.1[0m" 200 -
+2023-03-11 11:55:27,136 - 192.168.1.2 - - [11/Mar/2023 11:55:27] "[32mGET /display/greicy1.pdf HTTP/1.1[0m" 301 -
+2023-03-11 11:55:27,175 - 192.168.1.2 - - [11/Mar/2023 11:55:27] "[37mGET /static/uploads/greicy1.pdf HTTP/1.1[0m" 200 -
+2023-03-11 11:55:30,626 - 192.168.1.2 - - [11/Mar/2023 11:55:30] "[37mPOST /pay/greicy1.pdf HTTP/1.1[0m" 200 -
+2023-03-11 11:57:08,045 -  * Detected change in '/home/remoteprinter/Documentos/printAuto/main.py', reloading
+2023-03-11 11:57:08,243 -  * Restarting with stat
+2023-03-11 11:57:09,355 -  * Debugger is active!
+2023-03-11 11:57:09,356 -  * Debugger PIN: 263-317-410
+2023-03-11 11:57:13,627 - 192.168.1.2 - - [11/Mar/2023 11:57:13] "[37mGET / HTTP/1.1[0m" 200 -
+2023-03-11 11:57:18,254 - 192.168.1.2 - - [11/Mar/2023 11:57:18] "[37mPOST / HTTP/1.1[0m" 200 -
+2023-03-11 11:57:21,241 - 192.168.1.2 - - [11/Mar/2023 11:57:21] "[37mPOST /pay/greicy1.pdf HTTP/1.1[0m" 200 -
+2023-03-11 11:58:45,931 -  * Detected change in '/home/remoteprinter/Documentos/printAuto/main.py', reloading
+2023-03-11 11:58:46,126 -  * Restarting with stat
+2023-03-11 11:58:47,248 -  * Debugger is active!
+2023-03-11 11:58:47,249 -  * Debugger PIN: 263-317-410
+2023-03-11 11:58:54,710 - 192.168.1.2 - - [11/Mar/2023 11:58:54] "[37mGET / HTTP/1.1[0m" 200 -
+2023-03-11 11:58:59,636 - 192.168.1.2 - - [11/Mar/2023 11:58:59] "[37mPOST / HTTP/1.1[0m" 200 -
+2023-03-11 11:59:08,182 - 192.168.1.2 - - [11/Mar/2023 11:59:08] "[37mPOST /pay/greicy1.pdf HTTP/1.1[0m" 200 -
+2023-03-11 11:59:16,291 - 192.168.1.2 - - [11/Mar/2023 11:59:16] "[37mGET / HTTP/1.1[0m" 200 -
+2023-03-11 11:59:46,759 - 192.168.1.2 - - [11/Mar/2023 11:59:46] "[37mPOST / HTTP/1.1[0m" 200 -
+2023-03-11 11:59:49,725 - 192.168.1.2 - - [11/Mar/2023 11:59:49] "[37mPOST /pay/greicy1.pdf HTTP/1.1[0m" 200 -
+2023-03-11 12:00:13,608 -  * Detected change in '/home/remoteprinter/Documentos/printAuto/main.py', reloading
+2023-03-11 12:00:13,775 -  * Restarting with stat
+2023-03-11 12:00:14,951 -  * Debugger is active!
+2023-03-11 12:00:14,952 -  * Debugger PIN: 263-317-410
+2023-03-11 12:00:18,832 - 192.168.1.2 - - [11/Mar/2023 12:00:18] "[37mGET / HTTP/1.1[0m" 200 -
+2023-03-11 12:00:23,167 - 192.168.1.2 - - [11/Mar/2023 12:00:23] "[37mPOST / HTTP/1.1[0m" 200 -
+2023-03-11 12:00:25,853 - 192.168.1.2 - - [11/Mar/2023 12:00:25] "[37mPOST /pay/greicy1.pdf HTTP/1.1[0m" 200 -
+2023-03-11 12:00:43,995 -  * Detected change in '/home/remoteprinter/Documentos/printAuto/main.py', reloading
+2023-03-11 12:00:44,157 -  * Restarting with stat
+2023-03-11 12:00:45,338 -  * Debugger is active!
+2023-03-11 12:00:45,339 -  * Debugger PIN: 263-317-410
+2023-03-11 12:00:47,122 - 192.168.1.2 - - [11/Mar/2023 12:00:47] "[37mGET / HTTP/1.1[0m" 200 -
+2023-03-11 12:00:51,428 - 192.168.1.2 - - [11/Mar/2023 12:00:51] "[37mPOST / HTTP/1.1[0m" 200 -
+2023-03-11 12:00:54,229 - 192.168.1.2 - - [11/Mar/2023 12:00:54] "[37mPOST /pay/greicy2.pdf HTTP/1.1[0m" 200 -
+2023-03-11 13:00:03,696 -  * Running on http://192.168.1.21:3001/ (Press CTRL+C to quit)
+2023-03-11 13:00:03,700 -  * Restarting with stat
+2023-03-11 13:00:04,985 -  * Debugger is active!
+2023-03-11 13:00:04,986 -  * Debugger PIN: 294-152-481
+2023-03-11 13:43:09,991 -  * Detected change in '/home/remoteprinter/Documentos/printAuto/main.py', reloading
+2023-03-11 13:43:10,150 -  * Restarting with stat
+2023-03-11 13:44:22,678 -  * Running on http://192.168.1.21:3001/ (Press CTRL+C to quit)
+2023-03-11 13:44:22,680 -  * Restarting with stat
+2023-03-11 13:44:23,795 -  * Debugger is active!
+2023-03-11 13:44:23,796 -  * Debugger PIN: 294-152-481
+2023-03-11 13:44:39,284 -  * Detected change in '/home/remoteprinter/Documentos/printAuto/main.py', reloading
+2023-03-11 13:44:39,469 -  * Restarting with stat
+2023-03-11 13:44:40,593 -  * Debugger is active!
+2023-03-11 13:44:40,594 -  * Debugger PIN: 294-152-481
+2023-03-11 13:44:49,150 - 192.168.1.2 - - [11/Mar/2023 13:44:49] "[37mGET / HTTP/1.1[0m" 200 -
+2023-03-11 13:44:53,652 - 192.168.1.2 - - [11/Mar/2023 13:44:53] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2023-03-11 13:44:53,761 - 192.168.1.2 - - [11/Mar/2023 13:44:53] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2023-03-11 13:44:53,763 - 192.168.1.2 - - [11/Mar/2023 13:44:53] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2023-03-11 13:44:53,768 - 192.168.1.2 - - [11/Mar/2023 13:44:53] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2023-03-11 13:45:32,245 -  * Detected change in '/home/remoteprinter/Documentos/printAuto/main.py', reloading
+2023-03-11 13:45:32,449 -  * Restarting with stat
+2023-03-11 13:46:58,543 -  * Running on http://192.168.1.21:3001/ (Press CTRL+C to quit)
+2023-03-11 13:46:58,545 -  * Restarting with stat
+2023-03-11 13:46:59,657 -  * Debugger is active!
+2023-03-11 13:46:59,657 -  * Debugger PIN: 294-152-481
+2023-03-12 11:57:30,374 -  * Running on http://192.168.1.21:3001/ (Press CTRL+C to quit)
+2023-03-12 11:57:30,380 -  * Restarting with stat
+2023-03-12 11:57:31,501 -  * Debugger is active!
+2023-03-12 11:57:31,502 -  * Debugger PIN: 294-152-481

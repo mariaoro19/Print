@@ -14,10 +14,13 @@ from pytz import timezone
 import pytz
 import itertools
 import logging
+import info
+
 
 #Create a file of logs
 logging.basicConfig(filename='logs.txt',filemode='a',format='%(asctime)s - %(message)s', level=logging.ERROR)
-
+info.Info() 
+print( info.serial )
 
 format = "%Y-%m-%d %H:%M:%S %Z%z"
 # Current time in UTC
@@ -82,7 +85,7 @@ def upload_form():
 def upload_image():
    
     try:
-
+        
         if 'file' not in request.files:
             flash('Sin parte del archivo')
             return redirect(request.url)
@@ -214,10 +217,15 @@ def pay(filename):
         p=Prints(sheets=numPagePrinted, totalPrice=totalPrice, state=0)
         db.session.add(p)
         db.session.commit()
-        #printers = Prints.query.all()
-        #for p in printers:
-            #  print(p.id, p.printDate)
-        
+        printers = Prints.query.all()
+        print("printers", type(printers))
+        print(printers)
+        sumPages=0
+        for p in printers:
+            #print(p.id, p.printDate)
+            sumPages+=p.sheets
+        print("Suma de paginas",sumPages)
+
         #Connect to the printer
         if request.method == 'POST':
             conn = cups.Connection ()
@@ -266,11 +274,11 @@ def pay(filename):
 
 # Connecting to the localhost
 if __name__ == '__main__':
+   #app.run(debug=True,port=3003,host='0.0.0.0')
+   app.run(debug=True, port=3001, host='192.168.1.21')
+   #app.run(debug=True, port=3005, host='printexp')
    
-   app.run(debug=True, port=3003, host='192.168.1.21')
-   #app.run(debug=True, port=3003, host='127.0.0.2')
-   
-   #app.config['SERVER_NAME']= "printexp.dev:3003"
+   #app.config['SERVER_NAME']= "printexp:3003"
    #app.url_map.host_matching=True
    #app.run(debug=True, host='printexp.dev:3003')
    
